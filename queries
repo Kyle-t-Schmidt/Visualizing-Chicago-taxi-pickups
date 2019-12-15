@@ -1,0 +1,45 @@
+# Data location: 
+
+https://console.cloud.google.com/marketplace/details/city-of-chicago-public-data/chicago-taxi-trips
+
+
+# Query to get busiest week in 2018 by number of pickups:
+
+SELECT 
+  COUNT(*) AS Count,
+  extract(week FROM trip_start_timestamp) AS Week
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+WHERE
+	trip_start_timestamp >= '2018-01-01 00:00:00' AND
+  trip_start_timestamp < '2019-01-01 00:00:00' AND
+  pickup_location IS NOT NULL 
+GROUP BY
+  Week
+ORDER BY
+  Count DESC
+  ;
+
+
+# Query to get data for app:
+
+SELECT 
+  COUNT(*) AS Count,
+  pickup_location,
+  extract(day FROM trip_start_timestamp) AS Day,
+  extract(hour FROM trip_start_timestamp) AS Hour
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+WHERE
+  extract(year FROM trip_start_timestamp) = 2018 AND
+	extract(week FROM trip_start_timestamp) = 10 AND
+  pickup_location IS NOT NULL 
+GROUP BY
+  pickup_location,
+  Day,
+  Hour
+ORDER BY
+  pickup_location,
+  Day,
+  Hour
+;
