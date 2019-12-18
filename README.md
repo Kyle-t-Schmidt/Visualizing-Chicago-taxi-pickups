@@ -6,7 +6,7 @@ The Chicago Taxi Trips data is a publicly available dataset with information on 
 * R programming language
 * data visualization
 
-The datset can be found here: https://console.cloud.google.com/marketplace/details/city-of-chicago-public-data/chicago-taxi-trips
+The full data set can be found here: https://console.cloud.google.com/marketplace/details/city-of-chicago-public-data/chicago-taxi-trips
 
 ## Program Purpose
 The R Shiny app is an interactive map of Chicago taxi pickups on the busiest week of 2018 for Chicago taxis. With the app you are able to filter days and hours of the day to see where pcikups are happening and how many pickups are at each location.
