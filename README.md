@@ -12,7 +12,9 @@ The full data set can be found here: https://console.cloud.google.com/marketplac
 The R Shiny app is an interactive map of Chicago taxi pickups on the busiest week of 2018 for Chicago taxis. With the app you are able to filter days and hours of the day to see where pcikups are happening and how many pickups are at each location.
 
 ## Using the program
-To launch the app you first need to download the Taxi.csv file and the app.R and store them in the same location. Open the app.R file with R studio and click the launch app button. You may need to first set your working directory to the filepath where the Taxi.csv and app.R files are stored.
+This program is hosted on the web and can be viewed here: https://kyle-t-schmidt.shinyapps.io/taxi/
+
+To launch the app program from your cpmputer, first need to download the Taxi.csv file and the app.R and store them in the same location. Open the app.R file with R studio and click the launch app button. You may need to first set your working directory to the filepath where the Taxi.csv and app.R files are stored.
 
 Alternatively, you can download the data by going to https://console.cloud.google.com/marketplace/details/city-of-chicago-public-data/chicago-taxi-trips and using the queries in queries.txt.
 
